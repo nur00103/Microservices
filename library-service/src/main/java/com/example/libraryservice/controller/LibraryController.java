@@ -2,14 +2,12 @@ package com.example.libraryservice.controller;
 
 import com.example.libraryservice.dto.request.AddBookRequest;
 import com.example.libraryservice.dto.response.LibraryResponse;
-import com.example.libraryservice.entity.Library;
 import com.example.libraryservice.service.LibraryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 
 @RestController

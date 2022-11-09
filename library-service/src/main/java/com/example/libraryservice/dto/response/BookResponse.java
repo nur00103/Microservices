@@ -16,4 +16,10 @@ public class BookResponse {
     private String author;
     private String pressName;
     private String number;
+
+    public BookResponse(String id,String number){
+        this.id=id;
+        this.number=number;
+    }
+
 }
