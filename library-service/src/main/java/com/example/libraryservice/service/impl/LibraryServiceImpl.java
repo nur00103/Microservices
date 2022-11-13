@@ -51,6 +51,13 @@ public class LibraryServiceImpl implements LibraryService {
         return libraryResponse;
     }
 
+    @Override
+    public List<LibraryResponse> getAllLibrary() {
+        List<Library> libraryList=libraryRepository.findAll();
+        List<LibraryResponse> libraryResponseList=libraryList.stream().map(library -> convertToResponse(library)).collect(Collectors.toList());
+        return libraryResponseList;
+    }
+
     public LibraryResponse convertToResponse(Library library){
         LibraryResponse libraryResponse=modelMapper.map(library,LibraryResponse.class);
 //        List<BookResponse> bookResponseList=null;

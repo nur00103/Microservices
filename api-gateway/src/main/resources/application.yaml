@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: book-service
+          uri: lb://book-service
+          predicates:
+            - Path=/book/**
+        - id: library-service
+          uri: lb://library-service
+          predicates:
+            - Path=/library/**
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
