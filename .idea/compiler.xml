@@ -7,10 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="book-service" />
         <module name="BookService" />
         <module name="api-gateway" />
         <module name="library-service" />
-        <module name="book-service" />
         <module name="LibraryService" />
         <module name="eureka-server" />
       </profile>
@@ -19,6 +20,7 @@
       <module name="api-gateway" target="11" />
       <module name="book-service" target="11" />
       <module name="BookService" target="11" />
+      <module name="config-server" target="11" />
       <module name="eureka-server" target="11" />
       <module name="library-service" target="11" />
       <module name="LibraryService" target="11" />
@@ -30,6 +32,7 @@
       <module name="LibraryService" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
       <module name="book-service" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="library-service" options="-parameters" />
     </option>
